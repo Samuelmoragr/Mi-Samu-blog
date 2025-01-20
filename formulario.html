@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header><!-- contenido principal en sección -->
+        <h1>¡Colaboraciones!</h1>
+    </header>
+    <main>
+        <section>
+            <form action="">
+                <fieldset>
+            Nombre (s): <input type="text" placeholder="Blanca Adriana" required><br>
+            Apellidos: <input type="text" placeholder="Pérez González"><br>
+            Correo electrónico: <input type="email" placeholder="blanca.perez@gmail.com"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>¿Qué te gustaría colaborar?</legend>
+                    <label for="productor"><!-- el valor de atributo for en label, debe ser igual al valor de atributo ide en input -->
+                    <input id="productor" type="radio" name="tipo-de-colab"> Productor
+                    </label>
+                    <label for="compositor">
+                    <input id="compositor" type="radio" name="tipo-de-colab"> Compositor
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend> ¿De qué país eres?</legend>
+                    <select name="paises" id="">
+                        <option value=""> México</option>
+                        <option value=""> España</option>
+                        <option value=""> Estados Unidos</option>
+                        <option value=""> Puerto Rico</option>
+                        <option value=""> Latino Americano</option>
+                    </select> <br>
+                </fieldset>
+                <input type="checkbox" required> Acepto términos y condiciones <br>
+                <button type="submit"> ¡Enviar solicitud! </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
