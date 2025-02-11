@@ -1,6 +1,12 @@
 /* uniquifier: Use a unique and descriptive class name */
 /* weight: Use a value from 100 to 1000 */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .roboto-flex-unique {
   font-family: "Roboto Flex", serif;
   font-optical-sizing: auto;
@@ -21,5 +27,84 @@
 }
 
 h1{
+  font-family: "Roboto Flex", serif; /* declarar estilo sin tener haber declarado variable de estilo de fuente en root */
+}
+/* resetear los estilos  que vienen por default en el navegador */
+body{
   font-family: "Roboto Flex", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+:root{ /* : para colocar una pseudo clase. Vamos a declarar variables en el elemento root */
+  --color_de_fondo: #f3f9ff;
+  --color_de_componente: #002675;
+  --colo_resaltado: #4dcdf8c5 ;
+  --color_botones: #7991bc;
+  --color_adicional: #0059b5; /* podemos declarar variables para tamaños de fuente y unidades de medida */
+  --fuente_principal: 'Roboto Flex', serif;
+  /* --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-dark-color: #10121A;
+  --background-dark-grey: #191d2b;
+  --border-color: #2e344e;
+  --background-light-color: #f1f1f1;
+  --background-light-color-2: #f9f9f9;
+  --white-color: #fff;
+  --font-light-color: #a4acc4;
+  --font-dark-color: #313131;
+  --font-dark-color-2: #151515;
+  --sidebar-dark-color: #191d2b;
+  --scrollbar-bg-color: #383838;
+  --scrollbar-thump-color: #6b6b6b;
+  --scrollbar-track-color: #383838; */
+}
+h1{
+  /* font-size: 2.5rem;
+  color: var(--color_de_componente); */
+  font-family: var(--fuente_principal);/* asi se llama una variable con estilo que ya se demando en root */
+}
+
+header{
+  background-color: var(--color_de_fondo);
+  color: var(--color_de_componente);
+  text-align: center;
+  margin: 1em 0.5em;/* Trouble - Top, Right, Bottom, Left: sentido de las manecillas de reloj */
+  /* 1em es relativa y equivale a 16px porejem, margin es la capa mas externa */
+  padding: 2rem; /* tambien se aplica la propiedad trouble */
+  /* padding es la capa mas interna y da un relleno*/
+  position: sticky;
+  top: 20px;
+}
+/* .header-nav{d
+  display: flex;
+  /* justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color_de_fondo);
+  color: var(--color_de_componente);
+}*/
+
+nav>ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  list-style: none; /* quitar los puntos de la lista */
+  background-color: var(--color_botones);
+  /* color: var(--color_de_componente); */
+}
+
+nav ul li a{
+  color: var(--color_de_componente);
+  text-decoration: none; /* quitar subrayado de los links */
+}
+
+nav ul li a:hover{
+  color: var(--colo_resaltado); /* hover cambiar color al pasar el mouse ya sea de el texto o del backgound*/
+  background-color: var(--color_de_fondo);
 }

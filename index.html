@@ -9,20 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>Samu Blog</h1>
+    
+    <nav ><!-- navbar para desplegar un lista de las paginas, un tipo menu de las instancias -->
+        <ul>
+            <li><a href="index.html">Inicio</a></li><!-- atributo href antes de cerrar la et de apertura para referenciar la ruta de la hoja a la que nos va a dirigir -->
+            <li><a href="reseña.html">Reseña</a></li>
+            <li><a href="formulario.html">Contacto</a></li>
+            <li><a href="https://www.youtube.com/watch?v=21KJYK4391s" target="_blank">Mi música</a></li><!-- target blanck para que nos abra el enlace en una nueva pagina -->
+            <li><a href="#sobremi">Sobre mí</a></li><!-- para llevarnos a una sección dentro de una pagina sin tener que dar scroll  -->
+        </ul>
+    </nav>
     </header>
     <main>
         <section>
-            <img src="imagenes/20230310_205925.jpg" alt="Yo" width="1824" length="-236">
+            <img src="imagenes/20230310_205925.jpg" alt="Yo" width="100%" length="-12.94%"> <!-- tambien se puede declarar el tamaño de la img por px ej. width="1824" length="-236" -->
             <p>
                 En este blog hablaremos sobre la crisis de los 20s y un poco de música, para hacer menos triste el proceso.
             </p>
         </section>
         <section>
             <article>
-                <h2>Sobre mí</h2>
+                <h2 id="sobremi">Sobre mí</h2>
                 <p>Soy Samuel Aguirre Morales, tengo 24 años, nací y vivo en la Ciudad de México, estudié Contaduría en CU y actualmente estoy en un Bootcamp de Generation, un programa de desarrollador Full Stack.</p>
                 <p>
                     Me gusta mucho la música, tanto que uno de mis hobbies es producirla. También me encantan las películas y aprender cosas nuevas; siempre es bueno salir de la zona de confort.
